@@ -1,0 +1,42 @@
+defaults:
+    ref: refs/heads/master
+    remote: origin
+    source: github
+    protocol: ssh
+    recursive: true
+
+sources:
+  - name: github
+    url: github.com
+  - name: chromium
+    url: chromium.googlesource.com
+    protocol: https
+  - name: sourceforge
+    url: git.code.sf.net
+    protocol: https
+
+groups:
+  - name: third-party
+    projects:
+      - name: dropbox/djinni
+        path: djinni
+        remote: upstream
+        fork:
+          name: JrGoodle/djinni
+          remote: origin
+      - name: external/gyp
+        path: gyp
+        remote: upstream
+        source: chromium
+        fork:
+          name: JrGoodle/gyp
+          remote: origin
+          source: github
+      - name: p/sox/code
+        path: sox
+        remote: upstream
+        source: sourceforge
+        fork:
+          name: JrGoodle/sox
+          remote: origin
+          source: github
