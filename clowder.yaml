@@ -1,9 +1,9 @@
 defaults:
-    ref: refs/heads/master
-    remote: origin
-    source: github
-    protocol: ssh
-    recursive: true
+  ref: refs/heads/master
+  remote: origin
+  source: github
+  protocol: ssh
+  recursive: true
 
 sources:
   - name: github
@@ -15,28 +15,26 @@ sources:
     url: git.code.sf.net
     protocol: https
 
-groups:
-  - name: third-party
-    projects:
-      - name: dropbox/djinni
-        path: djinni
-        remote: upstream
-        fork:
-          name: JrGoodle/djinni
-          remote: origin
-      - name: external/gyp
-        path: gyp
-        remote: upstream
-        source: chromium
-        fork:
-          name: JrGoodle/gyp
-          remote: origin
-          source: github
-      - name: p/sox/code
-        path: sox
-        remote: upstream
-        source: sourceforge
-        fork:
-          name: JrGoodle/sox
-          remote: origin
-          source: github
+projects:
+  - name: dropbox/djinni
+    path: djinni
+    remote: upstream
+    groups: [third-party]
+    fork:
+      name: JrGoodle/djinni
+  - name: external/gyp
+    path: gyp
+    remote: upstream
+    source: chromium
+    groups: [third-party]
+    fork:
+      name: JrGoodle/gyp
+      source: github
+  - name: p/sox/code
+    path: sox
+    remote: upstream
+    source: sourceforge
+    groups: [third-party]
+    fork:
+      name: JrGoodle/sox
+      source: github
