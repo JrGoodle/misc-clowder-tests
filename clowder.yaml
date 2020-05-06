@@ -22,7 +22,8 @@ projects:
     groups: [third-party]
     fork:
       name: JrGoodle/djinni
-  - name: external/gyp
+  - alias: gyp
+    name: external/gyp
     path: gyp
     remote: upstream
     source: chromium
