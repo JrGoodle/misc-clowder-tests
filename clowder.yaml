@@ -30,6 +30,7 @@ projects:
     fork:
       name: JrGoodle/gyp
       source: github
+      ref: refs/heads/fork-branch
   - name: p/sox/code
     path: sox
     remote: upstream
