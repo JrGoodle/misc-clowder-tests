@@ -26,16 +26,15 @@ projects:
     path: gyp
     remote: upstream
     source: chromium
-    groups: [third-party, gyp]
+    groups: [third-party]
     fork:
       name: JrGoodle/gyp
       source: github
       branch: fork-branch
   - name: p/sox/code
-    path: sox
+    path: sox-code
     remote: upstream
     source: sourceforge
     groups: [third-party]
     fork:
       name: JrGoodle/sox
-      source: github
