@@ -1,3 +1,5 @@
+name: misc-test
+
 defaults:
   branch: master
   remote: origin
