@@ -1,11 +1,10 @@
 name: misc-test
 
 defaults:
-  branch: master
-  remote: origin
   source: github
   protocol: ssh
-  recursive: true
+  git:
+    recursive: true
 
 sources:
   - name: github
