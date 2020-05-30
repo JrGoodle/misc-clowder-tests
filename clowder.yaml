@@ -33,7 +33,7 @@ projects:
       source: github
       branch: fork-branch
   - name: p/sox/code
-    path: sox-code
+    path: sox
     remote: upstream
     source: sourceforge
     groups: [third-party]
