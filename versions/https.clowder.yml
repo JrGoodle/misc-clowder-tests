@@ -1,14 +1,11 @@
 name: misc-test
 
 defaults:
-  source: github
   protocol: https
   git:
     recursive: true
 
 sources:
-  - name: github
-    url: github.com
   - name: chromium
     url: chromium.googlesource.com
     protocol: https
@@ -30,7 +27,6 @@ projects:
     groups: [third-party]
     fork:
       name: JrGoodle/gyp
-      source: github
       branch: fork-branch
   - name: p/sox/code
     path: sox
