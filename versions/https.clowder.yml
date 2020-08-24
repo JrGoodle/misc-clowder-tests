@@ -1,37 +1,26 @@
-name: misc-test
+name: misc-test-https
 
 defaults:
   protocol: https
   git:
-    recursive: true
+    submodules: recursive
 
 sources:
   chromium:
     url: chromium.googlesource.com
     protocol: https
-  sourceforge:
-    url: git.code.sf.net
-    protocol: https
 
-projects:
-  - name: dropbox/djinni
-    path: djinni
-    remote: upstream
-    groups: [third-party]
-    fork:
-      name: JrGoodle/djinni
-  - name: external/gyp
-    path: gyp
-    remote: upstream
-    source: chromium
-    groups: [third-party]
-    fork:
-      name: JrGoodle/gyp
-      branch: fork-branch
-  - name: p/sox/code
-    path: sox
-    remote: upstream
-    source: sourceforge
-    groups: [third-party]
-    fork:
-      name: JrGoodle/sox
+clowder:
+  - name: JrGoodle/djinni
+    upstream: dropbox/djinni
+  - name: JrGoodle/gyp
+    branch: fork-branch
+    upstream:
+      name: external/gyp
+      source: chromium
+  - name: JrGoodle/sox
+    upstream:
+      name: p/sox/code
+      source:
+        url: git.code.sf.net
+        protocol: https

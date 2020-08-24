@@ -11,8 +11,7 @@ sources:
 
 clowder:
   - name: JrGoodle/djinni
-    upstream:
-      name: dropbox/djinni
+    upstream: dropbox/djinni
   - name: JrGoodle/gyp
     branch: fork-branch
     upstream:

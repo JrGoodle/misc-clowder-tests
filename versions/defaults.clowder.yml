@@ -1,9 +1,9 @@
-name: misc-test
+name: misc-test-defaults
 
 defaults:
   source: chromium
   git:
-    recursive: true
+    submodules: true
 
 sources:
   chromium:
@@ -13,28 +13,21 @@ sources:
     url: git.code.sf.net
     protocol: https
 
-projects:
-  - name: dropbox/djinni
-    path: djinni
-    remote: upstream
+clowder:
+  - name: JrGoodle/djinni
     source: github
     groups: [third-party]
-    fork:
-      name: JrGoodle/djinni
+    upstream:
+      name: dropbox/djinni
       source: github
-  - name: external/gyp
-    path: gyp
-    remote: upstream
+  - name: JrGoodle/gyp
+    source: github
+    branch: fork-branch
     groups: [third-party]
-    fork:
-      name: JrGoodle/gyp
-      source: github
-      branch: fork-branch
-  - name: p/sox/code
-    path: sox
-    remote: upstream
-    source: sourceforge
+    upstream: external/gyp
+  - name: JrGoodle/sox
+    source: github
     groups: [third-party]
-    fork:
-      name: JrGoodle/sox
-      source: github
+    upstream:
+      name: p/sox/code
+      source: sourceforge
