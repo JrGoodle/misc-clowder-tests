@@ -1,7 +1,8 @@
 name: misc-test-https
 
+protocol: https
+
 defaults:
-  protocol: https
   git:
     submodules: recursive
 
