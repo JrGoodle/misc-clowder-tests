@@ -3,7 +3,7 @@ name: misc-test-defaults
 defaults:
   source: chromium
   git:
-    submodules: true
+    submodules: update recursive
 
 sources:
   chromium:
